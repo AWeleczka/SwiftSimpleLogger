@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "SwiftSimpleLogger"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.summary = "Simple single-file logging for Swift 3"
   s.homepage = "https://github.com/AWeleczka/SwiftSimpleLogger/"
   s.license = {
