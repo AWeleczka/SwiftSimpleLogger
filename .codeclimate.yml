@@ -1,0 +1,8 @@
+engines:
+  taylor:
+    enabled: true
+ratings:
+  paths:
+  - "**.swift"
+exclude_paths:
+- "docs/"
