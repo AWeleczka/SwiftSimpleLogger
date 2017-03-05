@@ -46,6 +46,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 ---
 [![Platform Badge](https://cocoapod-badges.herokuapp.com/p/SwiftSimpleLogger/badge.svg)](https://cocoapods.org/pods/SwiftSimpleLogger)
 [![Version Badge](https://cocoapod-badges.herokuapp.com/v/SwiftSimpleLogger/badge.svg)](https://cocoapods.org/pods/SwiftSimpleLogger)
