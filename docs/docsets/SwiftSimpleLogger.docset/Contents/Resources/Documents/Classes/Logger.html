@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Logger Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Logger" class="dashAnchor"></a>
+    <a title="Logger Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">SwiftSimpleLogger Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/AWeleczka/SwiftSimpleLogger/"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Faweleczka%2Egithub%2Eio%2FSwiftSimpleLogger%2Fdocsets%2FSwiftSimpleLogger%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">SwiftSimpleLogger Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Logger Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Logger/LogLevel.html">– LogLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Logger</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Logger</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Simple single-file logging for Swift 3
+Logging to XCode-Console, file (for error-reporting) or remote Web-API</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC17SwiftSimpleLogger6Logger8LogLevel"></a>
+                    <a name="//apple_ref/swift/Enum/LogLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC17SwiftSimpleLogger6Logger8LogLevel">LogLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Available Log-Message-Levels</p>
+
+                        <a href="../Classes/Logger/LogLevel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">internal</span> <span class="kd">enum</span> <span class="kt">LogLevel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger15AllowConsoleLogSb"></a>
+                    <a name="//apple_ref/swift/Variable/AllowConsoleLog" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger15AllowConsoleLogSb">AllowConsoleLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allow logging to XCode-Console</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">AllowConsoleLog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger16ConsoleLogLevelsGSaOS0_8LogLevel_"></a>
+                    <a name="//apple_ref/swift/Variable/ConsoleLogLevels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger16ConsoleLogLevelsGSaOS0_8LogLevel_">ConsoleLogLevels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restrict console-output to these LogLevels</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">ConsoleLogLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Trace</span><span class="p">,</span> <span class="o">.</span><span class="kt">Debug</span><span class="p">,</span> <span class="o">.</span><span class="kt">Info</span><span class="p">,</span> <span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger13AllowLocalLogSb"></a>
+                    <a name="//apple_ref/swift/Variable/AllowLocalLog" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger13AllowLocalLogSb">AllowLocalLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allow logging to logfile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">AllowLocalLog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger14LocalLogLevelsGSaOS0_8LogLevel_"></a>
+                    <a name="//apple_ref/swift/Variable/LocalLogLevels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger14LocalLogLevelsGSaOS0_8LogLevel_">LocalLogLevels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restrict logfile-output to these LogLevels</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">LocalLogLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Info</span><span class="p">,</span> <span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger12LocalLogFileSS"></a>
+                    <a name="//apple_ref/swift/Variable/LocalLogFile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger12LocalLogFileSS">LocalLogFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Name of the logfile in the application directory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">LocalLogFile</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"application.log"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger14AllowRemoteLogSb"></a>
+                    <a name="//apple_ref/swift/Variable/AllowRemoteLog" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger14AllowRemoteLogSb">AllowRemoteLog</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allow logging to Remote-Script</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">AllowRemoteLog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger15RemoteLogLevelsGSaOS0_8LogLevel_"></a>
+                    <a name="//apple_ref/swift/Variable/RemoteLogLevels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger15RemoteLogLevelsGSaOS0_8LogLevel_">RemoteLogLevels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restrict remote-output to these LogLevels</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">RemoteLogLevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger12RemoteLogURLSS"></a>
+                    <a name="//apple_ref/swift/Variable/RemoteLogURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger12RemoteLogURLSS">RemoteLogURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL of the Remote-Script</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">RemoteLogURL</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC17SwiftSimpleLogger6Logger16RemoteIdentifierSS"></a>
+                    <a name="//apple_ref/swift/Variable/RemoteIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC17SwiftSimpleLogger6Logger16RemoteIdentifierSS">RemoteIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Identifyer-String of this session</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">RemoteIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC17SwiftSimpleLogger6LoggercFT15allowconsolelogSb16consoleloglevelsGSaOS0_8LogLevel_13allowlocallogSb14localloglevelsGSaS1__12locallogfileSS14allowremotelogSb15remoteloglevelsGSaS1__12remotelogurlSS16remoteidentifierSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(allowconsolelog:consoleloglevels:allowlocallog:localloglevels:locallogfile:allowremotelog:remoteloglevels:remotelogurl:remoteidentifier:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17SwiftSimpleLogger6LoggercFT15allowconsolelogSb16consoleloglevelsGSaOS0_8LogLevel_13allowlocallogSb14localloglevelsGSaS1__12locallogfileSS14allowremotelogSb15remoteloglevelsGSaS1__12remotelogurlSS16remoteidentifierSS_S0_">init(allowconsolelog:consoleloglevels:allowlocallog:localloglevels:locallogfile:allowremotelog:remoteloglevels:remotelogurl:remoteidentifier:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize Logger-Settings directly.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">allowconsolelog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">consoleloglevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Trace</span><span class="p">,</span> <span class="o">.</span><span class="kt">Debug</span><span class="p">,</span> <span class="o">.</span><span class="kt">Info</span><span class="p">,</span> <span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">],</span> <span class="nv">allowlocallog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">localloglevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Info</span><span class="p">,</span> <span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">],</span> <span class="nv">locallogfile</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Application.log"</span><span class="p">,</span> <span class="nv">allowremotelog</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">remoteloglevels</span><span class="p">:</span> <span class="p">[</span><span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="kt">Warning</span><span class="p">,</span> <span class="o">.</span><span class="kt">Error</span><span class="p">],</span> <span class="nv">remotelogurl</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">remoteidentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowconsolelog</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Allow logging to XCode-Console</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>consoleloglevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Restrict console-output to these LogLevels</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowlocallog</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Allow logging to logfile</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>localloglevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Restrict logfile-output to these LogLevels</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locallogfile</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the logfile in the application directory</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowremotelog</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Allow logging to Remote-Script</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteloglevels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Restrict remote-output to these LogLevels</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remotelogurl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL of the Remote-Script</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteidentifyer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifyer-String of this session</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Log-Methods"></a>
+                <a name="//apple_ref/swift/Section/Log-Methods" class="dashAnchor"></a>
+                <a href="#/Log-Methods">
+                  <h3 class="section-name">Log-Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger6accessFTSSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/access(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger6accessFTSSSiSiSS_T_">access(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log Function-Access as TRACE</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">access</span><span class="p">(</span><span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger6memoryFTSSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/memory(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger6memoryFTSSSiSiSS_T_">memory(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log Memory-Warning as WARNING</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">memory</span><span class="p">(</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger5traceFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/trace(format:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger5traceFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_">trace(format:_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a message as TRACE</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">trace</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="o">...</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Format or String of the message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Args used in format</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger5debugFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/debug(format:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger5debugFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_">debug(format:_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a message as DEBUG</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="o">...</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Format or String of the message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Args used in format</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger4infoFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/info(format:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger4infoFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_">info(format:_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a message as INFO</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">info</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="o">...</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Format or String of the message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Args used in format</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger7warningFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/warning(format:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger7warningFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_">warning(format:_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a message as WARNING</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">warning</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="o">...</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Format or String of the message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Args used in format</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger5errorFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/error(format:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger5errorFT6formatSSGSaPs7CVarArg__SSSiSiSS_T_">error(format:_:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a message as ERROR</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">CVarArg</span><span class="o">...</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Format or String of the message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>args</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Args used in format</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger5errorFT5errorPs5Error_SSSiSiSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/error(error:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger5errorFT5errorPs5Error_SSSiSiSS_T_">error(error:_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log an error as ERROR</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">error</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">file</span><span class="p">,</span> <span class="n">_</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">line</span><span class="p">,</span> <span class="n">_</span> <span class="nv">column</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="err">#</span><span class="n">column</span><span class="p">,</span> <span class="n">_</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="err">#</span><span class="n">function</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Error-Object</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the file-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the line-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>column</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the column-number along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>function</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Do not declare - passing the function-name along</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Housekeeping"></a>
+                <a name="//apple_ref/swift/Section/Housekeeping" class="dashAnchor"></a>
+                <a href="#/Housekeeping">
+                  <h3 class="section-name">Housekeeping</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger13flushLocalLogFT_SS"></a>
+                    <a name="//apple_ref/swift/Method/flushLocalLog()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger13flushLocalLogFT_SS">flushLocalLog()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return and delete local log</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flushLocalLog</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The current logfile-content before deletion</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6Logger14deleteLocalLogFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/deleteLocalLog()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6Logger14deleteLocalLogFT_T_">deleteLocalLog()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove local logfile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deleteLocalLog</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Internal%20Logging%20Logic"></a>
+                <a name="//apple_ref/swift/Section/Internal Logging Logic" class="dashAnchor"></a>
+                <a href="#/Internal%20Logging%20Logic">
+                  <h3 class="section-name">Internal Logging Logic</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A11consolelineFTOS0_8LogLevelV10Foundation4DateSSSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/consoleline(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A11consolelineFTOS0_8LogLevelV10Foundation4DateSSSS_T_">consoleline(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log data to XCode-Console</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">consoleline</span><span class="p">(</span><span class="n">_</span> <span class="nv">loglevel</span><span class="p">:</span> <span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loglevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Loge-Level of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Synchronized timestamp of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed log-message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed in-code-position of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A9locallineFTOS0_8LogLevelV10Foundation4DateSSSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/localline(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A9locallineFTOS0_8LogLevelV10Foundation4DateSSSS_T_">localline(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log data to local file</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">localline</span><span class="p">(</span><span class="n">_</span> <span class="nv">loglevel</span><span class="p">:</span> <span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loglevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Loge-Level of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Synchronized timestamp of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed log-message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed in-code-position of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A10remotelineFTOS0_8LogLevelV10Foundation4DateSSSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/remoteline(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A10remotelineFTOS0_8LogLevelV10Foundation4DateSSSS_T_">remoteline(_:_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log data to remote API</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">remoteline</span><span class="p">(</span><span class="n">_</span> <span class="nv">loglevel</span><span class="p">:</span> <span class="kt">Logger</span><span class="o">.</span><span class="kt"><a href="../Classes/Logger/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Date</span><span class="p">,</span> <span class="n">_</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loglevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Loge-Level of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Synchronized timestamp of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed log-message</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Pre-Parsed in-code-position of log-call</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A17parseAccurateDateFT4dateV10Foundation4Date_SS"></a>
+                    <a name="//apple_ref/swift/Method/parseAccurateDate(date:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC17SwiftSimpleLogger6LoggerP33_75D140C0E1C5C2D1B579D1B30044C07A17parseAccurateDateFT4dateV10Foundation4Date_SS">parseAccurateDate(date:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parse a Date-Object to a String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">parseAccurateDate</span><span class="p">(</span><span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>date</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Date-Object to be parsed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The String-Representation of date in format yyyy-MM-dd HH:mm:ss.SSS</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://AWeleczka.de/" target="_blank" rel="external">Alexander Weleczka</a>. All rights reserved. (Last updated: 2017-03-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
