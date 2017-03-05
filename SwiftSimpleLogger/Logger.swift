@@ -10,10 +10,10 @@ import Foundation
 
 /// Simple single-file logging for Swift 3
 /// Logging to XCode-Console, file (for error-reporting) or remote Web-API
-open class Logger: NSObject {
+public class Logger: NSObject {
 
     /// Available Log-Message-Levels
-    internal enum LogLevel: String {
+    public enum LogLevel: String {
         /// Trace-Message
         case Trace      = "TRC"
 
@@ -31,31 +31,31 @@ open class Logger: NSObject {
     }
 
     /// Allow logging to XCode-Console
-    open static var AllowConsoleLog: Bool = true
+    public static var AllowConsoleLog: Bool = true
 
     /// Restrict console-output to these LogLevels
-    open static var ConsoleLogLevels: [Logger.LogLevel] = [.Trace, .Debug, .Info, .Warning, .Error]
+    public static var ConsoleLogLevels: [Logger.LogLevel] = [.Trace, .Debug, .Info, .Warning, .Error]
 
     /// Allow logging to logfile
-    open static var AllowLocalLog: Bool = true
+    public static var AllowLocalLog: Bool = true
 
     /// Restrict logfile-output to these LogLevels
-    open static var LocalLogLevels: [Logger.LogLevel] = [.Info, .Warning, .Error]
+    public static var LocalLogLevels: [Logger.LogLevel] = [.Info, .Warning, .Error]
 
     /// Name of the logfile in the application directory
-    open static var LocalLogFile: String = "application.log"
+    public static var LocalLogFile: String = "application.log"
 
     /// Allow logging to Remote-Script
-    open static var AllowRemoteLog: Bool = true
+    public static var AllowRemoteLog: Bool = true
 
     /// Restrict remote-output to these LogLevels
-    open static var RemoteLogLevels: [Logger.LogLevel] = [.Warning, .Error]
+    public static var RemoteLogLevels: [Logger.LogLevel] = [.Warning, .Error]
 
     /// URL of the Remote-Script
-    open static var RemoteLogURL: String = ""
+    public static var RemoteLogURL: String = ""
 
     /// Identifyer-String of this session
-    open static var RemoteIdentifier: String = ""
+    public static var RemoteIdentifier: String = ""
 
     /**
         Initialize Logger-Settings directly.
@@ -70,7 +70,7 @@ open class Logger: NSObject {
         - parameter remotelogurl: URL of the Remote-Script
         - parameter remoteidentifyer: Identifyer-String of this session
     */
-    open init(allowconsolelog: Bool = true, consoleloglevels: [Logger.LogLevel] = [.Trace, .Debug, .Info, .Warning, .Error], allowlocallog: Bool = true, localloglevels: [Logger.LogLevel] = [.Info, .Warning, .Error], locallogfile: String = "Application.log", allowremotelog: Bool = false, remoteloglevels: [Logger.LogLevel] = [.Warning, .Error], remotelogurl: String = "", remoteidentifier: String = "") {
+    public init(allowconsolelog: Bool = true, consoleloglevels: [Logger.LogLevel] = [.Trace, .Debug, .Info, .Warning, .Error], allowlocallog: Bool = true, localloglevels: [Logger.LogLevel] = [.Info, .Warning, .Error], locallogfile: String = "Application.log", allowremotelog: Bool = false, remoteloglevels: [Logger.LogLevel] = [.Warning, .Error], remotelogurl: String = "", remoteidentifier: String = "") {
         Logger.AllowConsoleLog  = allowconsolelog
         Logger.ConsoleLogLevels = consoleloglevels
 
@@ -94,7 +94,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
     */
-    open static func access(_ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func access(_ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = "Accessed function \"\(function)\""
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -112,7 +112,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
      */
-    open static func memory( _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func memory( _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = "\"\(file.components(separatedBy: "/").last ?? "")\" received a memory-warning"
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -132,7 +132,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
     */
-    open static func trace(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func trace(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = String(format: format, args)
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -152,7 +152,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
      */
-    open static func debug(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func debug(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = String(format: format, args)
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -172,7 +172,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
     */
-    open static func info(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func info(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = String(format: format, args)
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -192,7 +192,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
     */
-    open static func warning(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func warning(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = String(format: format, args)
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -212,7 +212,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
      */
-    open static func error(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func error(format: String, _ args: CVarArg..., _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = String(format: format, args)
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -231,7 +231,7 @@ open class Logger: NSObject {
         - parameter column: Do not declare - passing the column-number along
         - parameter function: Do not declare - passing the function-name along
      */
-    open static func error(error: Error, _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
+    public static func error(error: Error, _ file: String = #file, _ line: Int = #line, _ column: Int = #column, _ function: String = #function) {
         let message     = "Error# \(error._code) occured \"\(error.localizedDescription)\""
         let timestamp   = Date()
         let position    = String(format: "%@[%d]", file.components(separatedBy: "/").last ?? "", line)
@@ -248,7 +248,7 @@ open class Logger: NSObject {
 
         - returns: The current logfile-content before deletion
      */
-    open static func flushLocalLog() -> String {
+    public static func flushLocalLog() -> String {
         if let logfile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, !Logger.LocalLogFile.isEmpty {
             let logfile = logfile.appendingPathComponent(Logger.LocalLogFile)
             do {
@@ -267,7 +267,7 @@ open class Logger: NSObject {
     /**
         Remove local logfile
     */
-    open static func deleteLocalLog() {
+    public static func deleteLocalLog() {
         if let logfile = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first, !Logger.LocalLogFile.isEmpty {
             let logfile = logfile.appendingPathComponent(Logger.LocalLogFile)
             do {
