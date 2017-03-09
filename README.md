@@ -53,3 +53,4 @@ SOFTWARE.
 [![License Badge](https://cocoapod-badges.herokuapp.com/l/SwiftSimpleLogger/badge.svg)](https://cocoapods.org/pods/SwiftSimpleLogger)
 [![Code Climate](https://codeclimate.com/github/AWeleczka/SwiftSimpleLogger/badges/gpa.svg)](https://codeclimate.com/github/AWeleczka/SwiftSimpleLogger)
 [![Issue Count](https://codeclimate.com/github/AWeleczka/SwiftSimpleLogger/badges/issue_count.svg)](https://codeclimate.com/github/AWeleczka/SwiftSimpleLogger)
+[![Build Status](https://travis-ci.org/AWeleczka/SwiftSimpleLogger.svg?branch=master)](https://travis-ci.org/AWeleczka/SwiftSimpleLogger)
